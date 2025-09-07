@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -6,7 +6,7 @@ import Users from "./pages/Users";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <div className="container mx-auto mt-4">
         <Routes>
@@ -15,7 +15,7 @@ function App() {
           <Route path="/users" element={<Users />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </>
   );
 }
 
